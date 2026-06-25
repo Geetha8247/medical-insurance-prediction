@@ -88,7 +88,7 @@ if st.button("🔮 Predict Insurance Cost"):
         prediction = model.predict(processed)[0]
 
        
-inr = prediction * 83.5  # 1 USD ≈ 83.5 INR
+         inr = prediction * 83.5
         st.markdown(f"""
         <div style='background:linear-gradient(135deg,#1e3a5f,#2e6da4);border-radius:16px;
         padding:2rem;text-align:center;color:white;margin-top:1rem'>
