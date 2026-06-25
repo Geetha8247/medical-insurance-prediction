@@ -137,11 +137,10 @@ Open browser at `http://localhost:8501`
 ## 📸 Screenshots
 
 ### App Interface
-> Input form with age, BMI, smoker status, region inputs
+![App Interface](screenshot1.png)
 
 ### Prediction Output
-> Displays estimated cost in USD and INR with monthly breakdown
-
+![Prediction Output](screenshot2.png)
 ---
 
 ## 🎁 Bonus Completed
