@@ -91,9 +91,9 @@ st.markdown("""
 @st.cache_resource
 def load_artifacts():
     try:
-        model        = joblib.load("models/model.pkl")
-        preprocessor = joblib.load("models/preprocessor.pkl")
-        config       = joblib.load("models/feature_config.pkl")
+        model = joblib.load("model.pkl")
+preprocessor = joblib.load("preprocessor.pkl")
+config  = joblib.load("feature_config.pkl")
         return model, preprocessor, config
     except FileNotFoundError:
         return None, None, None
