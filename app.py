@@ -87,15 +87,17 @@ if st.button("🔮 Predict Insurance Cost"):
         processed  = preprocessor.transform(input_df)
         prediction = model.predict(processed)[0]
 
+       
+inr = prediction * 83.5  # 1 USD ≈ 83.5 INR
         st.markdown(f"""
         <div style='background:linear-gradient(135deg,#1e3a5f,#2e6da4);border-radius:16px;
         padding:2rem;text-align:center;color:white;margin-top:1rem'>
         <div style='font-size:0.9rem;opacity:0.8;text-transform:uppercase'>Estimated Annual Cost</div>
-        <div style='font-size:3rem;font-weight:800'>${prediction:,.2f}</div>
-        <div style='opacity:0.7'>≈ ${prediction/12:,.2f} per month</div>
+        <div style='font-size:3rem;font-weight:800'>${prediction:,.2f} USD</div>
+        <div style='font-size:1.5rem;font-weight:600;margin-top:0.3rem'>₹{inr:,.0f} INR</div>
+        <div style='opacity:0.7;margin-top:0.4rem'>≈ ${prediction/12:,.2f} USD / ₹{inr/12:,.0f} INR per month</div>
         </div>
         """, unsafe_allow_html=True)
-
         if smoker == "yes":
             st.warning("🚬 Smoking is the biggest cost driver — ~4x higher charges!")
         if bmi >= 30:
