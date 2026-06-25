@@ -159,5 +159,3 @@ Open browser at `http://localhost:8501`
 
 ---
 
-## 📄 License
-This project is for academic purposes only.
